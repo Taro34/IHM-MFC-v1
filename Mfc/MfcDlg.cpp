@@ -6,6 +6,9 @@
 #include "Mfc.h"
 #include "MfcDlg.h"
 #include "afxdialogex.h"
+#include "CDonne.h"
+#include "CJoueur.h"
+#include "CPartie.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -58,12 +61,17 @@ CMfcDlg::CMfcDlg(CWnd* pParent /*=NULL*/)
 void CMfcDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_COMBO2, mComboContrat);
+	DDX_Control(pDX, IDC_COMBO1, mPreneur);
 }
 
 BEGIN_MESSAGE_MAP(CMfcDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_EN_CHANGE(IDC_EDIT1, &CMfcDlg::OnEnChangeEdit1)
+	ON_CBN_SELCHANGE(IDC_COMBO2, &CMfcDlg::OnCbnSelchangeCombo2)
+	ON_CBN_SELCHANGE(IDC_COMBO1, &CMfcDlg::OnCbnSelchangeCombo1)
 END_MESSAGE_MAP()
 
 
@@ -99,6 +107,20 @@ BOOL CMfcDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Définir une petite icône
 
 	// TODO: ajoutez ici une initialisation supplémentaire
+	/*lesJoueurs[0] = new CJoueur("mikel");
+	lesJoueurs[1] = new CJoueur("mathis");
+	lesJoueurs[2] = new CJoueur("theo");
+	lesJoueurs[3] = new CJoueur("freya");
+	UpdateData(true);
+	mPreneur.ResetContent();
+	UpdateData(false);
+
+	for (int i = 0; i < 4; i++)
+	{
+		mPreneur.AddString(CString(lesJoueurs[i]->lireNom().c_str()));
+	}
+	laPartie = new CPartie(lesJoueurs);
+	*/
 
 	return TRUE;  // retourne TRUE, sauf si vous avez défini le focus sur un contrôle
 }
@@ -150,5 +172,35 @@ void CMfcDlg::OnPaint()
 HCURSOR CMfcDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
+}
+
+
+
+void CMfcDlg::OnEnChangeEdit1()
+{
+	// TODO:  S'il s'agit d'un contrôle RICHEDIT, le contrôle ne
+	// envoyez cette notification sauf si vous substituez CDialogEx::OnInitDialog()
+	// fonction et appelle CRichEditCtrl().SetEventMask()
+	// avec l'indicateur ENM_CHANGE ajouté au masque grâce à l'opérateur OR.
+
+	// TODO:  Ajoutez ici le code de votre gestionnaire de notification de contrôle
+}
+
+
+void CMfcDlg::OnCbnSelchangeCombo2()
+{
+	int index = -1;
+	index = mComboContrat.GetCurSel();
+	
+}
+
+
+void CMfcDlg::OnCbnSelchangeCombo1()
+{
+	int index =0;
+	index = mPreneur.GetCurSel();
+	
+	laPartie->setPreneur(lesJoueurs[index]);
+
 }
 

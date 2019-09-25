@@ -70,6 +70,17 @@ BOOL CMfcApp::InitInstance()
 	// telles que le nom de votre société ou organisation
 	SetRegistryKey(_T("Applications locales générées par AppWizard"));
 
+
+
+	
+
+
+
+
+
+
+
+
 	CMfcDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();

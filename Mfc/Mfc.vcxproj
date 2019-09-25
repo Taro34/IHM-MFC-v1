@@ -185,6 +185,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\CDonne.h" />
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\CJoueur.h" />
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\CPartie.h" />
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\IHM.h" />
     <ClInclude Include="Mfc.h" />
     <ClInclude Include="MfcDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -192,6 +196,11 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\CDonne.cpp" />
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\CJoueur.cpp" />
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\CPartie.cpp" />
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\IHM.cpp" />
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\Tarot.cpp" />
     <ClCompile Include="Mfc.cpp" />
     <ClCompile Include="MfcDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -213,4 +222,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Mfc.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

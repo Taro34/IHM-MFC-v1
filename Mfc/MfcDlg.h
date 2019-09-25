@@ -3,7 +3,8 @@
 //
 
 #pragma once
-
+#include "afxwin.h"
+#include "CJoueur.h"
 
 // boîte de dialogue CMfcDlg
 class CMfcDlg : public CDialogEx
@@ -30,5 +31,11 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
-	DECLARE_MESSAGE_MAP()
+	DECLARE_MESSAGE_MAP();
+public:
+	afx_msg void OnEnChangeEdit1();
+	afx_msg void OnCbnSelchangeCombo2();
+	CComboBox mComboContrat;
+	afx_msg void OnCbnSelchangeCombo1();
+	CComboBox mPreneur;//jhh
 };

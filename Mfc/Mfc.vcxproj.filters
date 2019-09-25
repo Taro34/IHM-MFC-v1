@@ -33,6 +33,18 @@
     <ClInclude Include="Resource.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\CDonne.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\CJoueur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\CPartie.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\mfc\Tarot-master\Tarot\IHM.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mfc.cpp">
@@ -42,6 +54,21 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\CDonne.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\CJoueur.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\CPartie.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\IHM.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\mfc\Tarot-master\Tarot\Tarot.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
